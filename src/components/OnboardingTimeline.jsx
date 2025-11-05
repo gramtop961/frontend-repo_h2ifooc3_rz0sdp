@@ -27,7 +27,7 @@ export default function OnboardingTimeline({ currentKey = "offer" }) {
     <div className="w-full bg-white border rounded-xl p-5 sm:p-6">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-base font-semibold text-slate-900">Your Journey</h2>
-        <span className="text-xs px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-100">
+        <span className="text-xs px-2.5 py-1 rounded-full bg-gradient-to-r from-indigo-50 to-fuchsia-50 text-indigo-700 border border-indigo-100">
           {currentIndex + 1} / {stepsData.length} stages
         </span>
       </div>
@@ -39,7 +39,7 @@ export default function OnboardingTimeline({ currentKey = "offer" }) {
           return (
             <li key={step.key} className="flex gap-4 pb-5 last:pb-0 relative">
               <div className="flex flex-col items-center">
-                <div className={`h-8 w-8 rounded-full grid place-items-center border ${
+                <div className={`h-8 w-8 rounded-full grid place-items-center border shadow-sm ${
                   isDone ? "bg-emerald-50 border-emerald-200 text-emerald-600" : isCurrent ? "bg-indigo-50 border-indigo-200 text-indigo-600" : "bg-white border-slate-200 text-slate-400"
                 }`}>
                   {isDone ? <CheckCircle2 className="h-4 w-4" /> : <Icon className="h-4 w-4" />}
@@ -52,7 +52,7 @@ export default function OnboardingTimeline({ currentKey = "offer" }) {
                 <p className="text-sm font-medium text-slate-900">{step.title}</p>
                 <p className="text-sm text-slate-500">{step.desc}</p>
                 {isCurrent && (
-                  <div className="mt-2 text-xs inline-flex items-center gap-2 px-2 py-1 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-100">
+                  <div className="mt-2 text-xs inline-flex items-center gap-2 px-2 py-1 rounded-md bg-gradient-to-r from-indigo-50 to-fuchsia-50 text-indigo-700 border border-indigo-100">
                     <span className="h-2 w-2 rounded-full bg-indigo-500 animate-pulse" />
                     In progress
                   </div>

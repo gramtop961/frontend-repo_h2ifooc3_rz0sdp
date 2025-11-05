@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FileText, Check, X, CalendarDays } from "lucide-react";
+import { FileText, Check, X, CalendarDays, IndianRupee } from "lucide-react";
 
 export default function OfferLetterCard() {
   const [status, setStatus] = useState("pending"); // pending | accepted | declined
@@ -12,12 +12,12 @@ export default function OfferLetterCard() {
     <div className="bg-white border rounded-xl p-5 sm:p-6">
       <div className="flex items-start justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-violet-600 to-indigo-600 text-white grid place-items-center shadow-sm">
+          <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-fuchsia-600 to-indigo-600 text-white grid place-items-center shadow-sm">
             <FileText className="h-5 w-5" />
           </div>
           <div>
             <h3 className="text-base font-semibold text-slate-900">Offer Letter</h3>
-            <p className="text-sm text-slate-500">Senior Product Designer · San Francisco · Full‑time</p>
+            <p className="text-sm text-slate-500">Senior Product Designer · Bengaluru · Full‑time</p>
           </div>
         </div>
 
@@ -55,6 +55,21 @@ export default function OfferLetterCard() {
             <X className="h-4 w-4" /> You declined the offer. Contact HR to revisit options.
           </div>
         )}
+      </div>
+
+      <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className="p-3 rounded-lg border bg-amber-50/60">
+          <p className="text-xs text-amber-700">Compensation</p>
+          <p className="text-sm font-semibold text-amber-900 inline-flex items-center gap-1"><IndianRupee className="h-4 w-4" /> 28 LPA</p>
+        </div>
+        <div className="p-3 rounded-lg border bg-indigo-50/60">
+          <p className="text-xs text-indigo-700">Joining</p>
+          <p className="text-sm font-semibold text-indigo-900">04 Nov 2025</p>
+        </div>
+        <div className="p-3 rounded-lg border bg-emerald-50/60">
+          <p className="text-xs text-emerald-700">Location</p>
+          <p className="text-sm font-semibold text-emerald-900">Bellandur, Bengaluru</p>
+        </div>
       </div>
     </div>
   );

@@ -3,28 +3,28 @@ import { MessageSquare, HelpCircle, Shield } from "lucide-react";
 
 const feedback = [
   {
-    author: "Jordan (Hiring Manager)",
+    author: "Kiran (Hiring Manager)",
     message:
-      "Great portfolio walkthrough. For onboarding, focus on our design system primer — it'll speed up your first sprints.",
+      "Excellent portfolio walkthrough. For onboarding, start with the Design System guide — it will accelerate your first sprint.",
     time: "2d ago",
   },
   {
-    author: "Jordan (Hiring Manager)",
+    author: "Kiran (Hiring Manager)",
     message:
-      "We'll pair you with a buddy in the first week. Feel free to drop any questions here in the portal as well.",
+      "We’ll pair you with a buddy in week one. Drop any questions here — we watch this closely.",
     time: "3d ago",
   },
 ];
 
 const faqs = [
-  { q: "When does my health insurance start?", a: "Coverage begins on your first day of employment." },
+  { q: "When does my health insurance start?", a: "Coverage begins on your first working day." },
   { q: "What laptop will I receive?", a: "MacBook Pro 14'' (or equivalent) with standard accessories." },
   { q: "Is remote work supported?", a: "We operate hybrid. Coordinate with your manager for schedules." },
 ];
 
 const policies = [
   { title: "Code of Conduct", desc: "Professional standards and behavior expectations across the organization." },
-  { title: "Leave Policy", desc: "Annual, sick, parental leave and public holidays overview." },
+  { title: "Leave Policy (India)", desc: "Annual, sick, casual, and parental leave details as per policy." },
   { title: "Security & Privacy", desc: "Data handling, device policies, and security best practices." },
 ];
 
@@ -32,8 +32,8 @@ export default function InsightsPanel() {
   const [tab, setTab] = useState("feedback");
 
   return (
-    <div className="bg-white border rounded-xl">
-      <div className="px-5 sm:px-6 pt-5 sm:pt-6 border-b">
+    <div className="bg-white border rounded-xl overflow-hidden">
+      <div className="px-5 sm:px-6 pt-5 sm:pt-6 border-b bg-gradient-to-r from-slate-50 to-white">
         <div className="flex items-center gap-2">
           <button
             onClick={() => setTab("feedback")}
@@ -72,7 +72,7 @@ export default function InsightsPanel() {
         {tab === "feedback" && (
           <ul className="space-y-4">
             {feedback.map((f, idx) => (
-              <li key={idx} className="p-4 border rounded-lg bg-slate-50/60">
+              <li key={idx} className="p-4 border rounded-lg bg-gradient-to-br from-indigo-50/60 to-fuchsia-50/60">
                 <div className="flex items-center justify-between mb-1">
                   <p className="text-sm font-medium text-slate-900">{f.author}</p>
                   <span className="text-xs text-slate-500">{f.time}</span>
